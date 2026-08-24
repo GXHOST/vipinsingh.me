@@ -18,6 +18,7 @@
     site:      'https://vipinsingh.me',
     company:   'https://genxwhosting.com',
     linkedin:  'https://www.linkedin.com/in/bestvipin',
+    instagram: 'https://www.instagram.com/vipinsi/',
     street:    '27/1A, Gokhale Marg, 3rd Floor, Riz Building',
     city:      'Lucknow',
     region:    'Uttar Pradesh',
@@ -42,6 +43,7 @@
       'URL:' + CONTACT.site,
       'URL;TYPE=WORK:' + CONTACT.company,
       'X-SOCIALPROFILE;TYPE=linkedin:' + CONTACT.linkedin,
+      'X-SOCIALPROFILE;TYPE=instagram:' + CONTACT.instagram,
       'NOTE:' + CONTACT.note,
       'REV:' + new Date().toISOString().replace(/\.\d{3}/, ''),
       'END:VCARD'
@@ -167,6 +169,7 @@
       'TEL;TYPE=CELL:' + CONTACT.phone,
       'EMAIL;TYPE=WORK:' + CONTACT.email,
       'URL:' + CONTACT.site,
+      'X-SOCIALPROFILE;TYPE=linkedin:' + CONTACT.linkedin,
       'END:VCARD'
     ].join('\r\n');
   }

@@ -342,7 +342,7 @@ html[data-theme="dark"] .portrait__badge strong { color: var(--on-surface); }
   text-transform: uppercase;
   color: var(--on-surface-variant);
 }
-@media (min-width: 768px) { .stats { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 768px) { .stats { grid-template-columns: repeat(3, 1fr); } }
 
 /* ---------- Timeline ---------- */
 .timeline { border-left: 2px solid var(--outline); padding-left: 28px; display: grid; gap: 40px; }
@@ -446,7 +446,7 @@ html[data-theme="dark"] .contact-row a { color: var(--primary); }
   line-height: 0;
 }
 .qr-frame { width: max-content; }
-.qr-frame > * { display: block; width: 200px; height: 200px; max-width: none; }
+.qr-frame > * { display: block; width: 220px; height: 220px; max-width: none; }
 .qr-caption { font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--on-surface-variant); }
 
 .actions-row { display: flex; flex-wrap: wrap; gap: 12px; }
