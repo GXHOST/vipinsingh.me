@@ -34,11 +34,23 @@ be updated to match:
 - `assets/vipin-singh.vcf` (the static fallback file)
 - the `application/ld+json` block in `index.html`
 
-## Adding the portrait
+## The hero portrait
 
-Drop a photo at `assets/img/vipin-singh.jpg` (portrait crop, roughly 4:5, ~1200px wide).
-Until then the hero shows a monogram fallback — the `onerror` handler removes the
-broken image automatically, so a missing file never shows a broken icon.
+`assets/img/vipin-singh.jpg` is what the page loads (1023x1537, ~185&nbsp;KB). It is a
+JPEG re-encode of the original `assets/img/vipinsingh.png`, which is kept as the
+source file but never served — the PNG is 1.67&nbsp;MB, which is too heavy for a hero
+image. To swap the photo, replace the PNG and re-encode:
+
+```
+sips -s format jpeg -s formatOptions 80 assets/img/vipinsingh.png --out assets/img/vipin-singh.jpg
+```
+
+The frame is 4:5 and the photo is 2:3, so `object-position: 50% 18%` in
+`style.css` biases the crop upward to keep headroom above the face. Adjust that
+percentage if you change the photo.
+
+If the file is ever missing, the hero falls back to a "VS" monogram — the `onerror`
+handler removes the broken image, so it never shows a broken-image icon.
 
 ## Adding a blog post
 
