@@ -17,6 +17,7 @@
     phoneLabel:'+91 94296 92542',
     site:      'https://vipinsingh.me',
     company:   'https://genxwhosting.com',
+    product2:  'https://nivichat.in',
     linkedin:  'https://www.linkedin.com/in/bestvipin',
     instagram: 'https://www.instagram.com/vipinsi/',
     street:    '27/1A, Gokhale Marg, 3rd Floor, Riz Building',
@@ -24,7 +25,7 @@
     region:    'Uttar Pradesh',
     zip:       '226001',
     country:   'India',
-    note:      'Domains & hosting made simple.'
+    note:      'Gen X Web Hosting (domains & hosting) and NiviChat (AI chatbot for web & WhatsApp).'
   };
 
   function vcard() {
@@ -42,6 +43,7 @@
         CONTACT.region + ';' + CONTACT.zip + ';' + CONTACT.country,
       'URL:' + CONTACT.site,
       'URL;TYPE=WORK:' + CONTACT.company,
+      'URL;TYPE=WORK:' + CONTACT.product2,
       'X-SOCIALPROFILE;TYPE=linkedin:' + CONTACT.linkedin,
       'X-SOCIALPROFILE;TYPE=instagram:' + CONTACT.instagram,
       'NOTE:' + CONTACT.note,

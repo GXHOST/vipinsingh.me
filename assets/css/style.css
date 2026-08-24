@@ -394,6 +394,72 @@ html[data-theme="dark"] .tile__icon { color: var(--primary); }
   letter-spacing: .1em; text-transform: uppercase; color: #fff;
 }
 
+/* ---------- Ventures ---------- */
+.ventures { grid-template-columns: 1fr; }
+@media (min-width: 860px) { .ventures { grid-template-columns: repeat(2, 1fr); } }
+
+.venture { padding: 32px; display: flex; flex-direction: column; gap: 20px; }
+@media (min-width: 768px) { .venture { padding: 40px; } }
+
+.venture__head { display: flex; align-items: center; gap: 16px; }
+.venture__head h3 { font-size: 1.5rem; line-height: 1.2; }
+.venture__role {
+  display: block;
+  margin-top: 4px;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.venture__mark {
+  flex: none;
+  width: 56px; height: 56px;
+  display: grid; place-content: center;
+  border-radius: var(--r-lg);
+  font-family: Montserrat, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  color: #fff;
+}
+.venture__mark[data-brand="genx"] { background: linear-gradient(140deg, #003a9e, #00113a); }
+.venture__mark[data-brand="nivi"] { background: linear-gradient(140deg, #ff8c00, #e64a19); }
+
+.venture > p { color: var(--on-surface-variant); }
+
+.venture__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin: 4px 0 0;
+  background: var(--outline);
+  border: 1px solid var(--outline);
+  border-radius: var(--r);
+  overflow: hidden;
+}
+.venture__stats > div { background: var(--surface); padding: 16px 12px; }
+.venture__stats dt {
+  font-family: Montserrat, sans-serif;
+  /* Three cells share a card, so the number has to survive a ~100px column. */
+  font-size: clamp(1rem, 4vw, 1.25rem);
+  font-weight: 700;
+  letter-spacing: -.01em;
+  color: var(--accent);
+  line-height: 1.1;
+  white-space: nowrap;
+}
+.venture__stats dd {
+  margin: 4px 0 0;
+  font-size: .6875rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--on-surface-variant);
+}
+.venture__cta { align-self: flex-start; margin-top: auto; text-transform: none; letter-spacing: 0; }
+.venture__cta .i { width: 16px; height: 16px; }
+
 /* ---------- Chips ---------- */
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip {

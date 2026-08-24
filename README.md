@@ -1,6 +1,7 @@
 # vipinsingh.me
 
-Personal site for **Vipin Singh** — Founder & CEO, [Gen X Web Hosting](https://genxwhosting.com).
+Personal site for **Vipin Singh** — founder of [Gen X Web Hosting](https://genxwhosting.com)
+and [NiviChat](https://nivichat.in).
 
 Static HTML/CSS/JS. No build step, no framework, no dependencies to install.
 Deployed with GitHub Pages on the custom domain `vipinsingh.me`.
@@ -8,7 +9,7 @@ Deployed with GitHub Pages on the custom domain `vipinsingh.me`.
 ## Structure
 
 ```
-index.html                 Homepage — hero, journey, work, contact + QR, latest writing
+index.html                 Homepage — hero, journey, ventures, how I work, contact + QR, writing
 blog.html                  Blog index with category filters
 posts/*.html               Individual articles
 404.html                   Not-found page
@@ -26,6 +27,11 @@ assets/vipin-singh.vcf     Downloadable contact card
 Contact details live in **one place**: the `CONTACT` object at the top of
 `assets/js/main.js`. The .vcf download and the QR code are both generated from it,
 so changing a number or an email there updates both.
+
+The QR carries a deliberately trimmed card — name, org, title, phone, email, site
+and LinkedIn. The .vcf download carries everything, including the postal address,
+both product URLs and the Instagram profile. Keep it that way: every character
+added to the QR payload makes its modules smaller and harder for a camera to read.
 
 Three places still hold a copy for people who arrive without JavaScript, and should
 be updated to match:
